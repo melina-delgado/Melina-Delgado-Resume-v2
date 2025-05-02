@@ -1,0 +1,73 @@
+%-------------------------------------------------------------------------------
+%	SECTION TITLE
+%-------------------------------------------------------------------------------
+\cvsection{Work Experience}
+
+
+%-------------------------------------------------------------------------------
+%	CONTENT
+%-------------------------------------------------------------------------------
+\begin{cventries}
+
+%---------------------------------------------------------
+  \cventry
+    {Software Engineer} % Job title
+    {Cisco Systems, Talos Intelligence Group} % Organization
+    {RTP, NC} % Location
+    {Jan 2022 - Present} % Date(s)
+    {
+        Lead software engineer for the \textit{Talos Antispam Logic Engine} (TALN), an AWS \textbf{Kubernetes} email scanning service which detects spam, ham, and phishing emails, providing intelligence for the \href{https://www.cisco.com/site/us/en/products/security/secure-email/index.html}{Cisco Secure Email Threat Defense} product, which scans \textbf{30 million} emails daily and receives up to \textbf{1100 messages/second}. \hfill \break
+        \begin{cvitems} % Description(s) of tasks/responsibilities
+            \iftoggle{security}{
+                \item Led \href{https://www.fedramp.gov/}{FedRAMP} migration required by government customers, including \textbf{vulnerability management and secure re-architecture}, and presented the outcomes for new products across the Talos portfolio
+                \item Performed security hardening on applications within the portfolio, such as ensuring FIPS 140-3 cryptography for Go and OpenSSL and DNSSEC validation
+                \item Identified and mitigated security vulnerabilities, as well as proved false positive vulnerability detection
+            }{}
+            \iftoggle{observability}{
+                \item Improved observability, logging, and metrics via \textbf{Prometheus and Grafana}
+                \item Leveraged \textbf{Kafka} for sending application service logs to data warehouses such as \textbf{Databricks} and \textbf{Elasticsearch} for further analysis and research
+            }{}
+            \iftoggle{cloud}{
+                \item Re-architected TALN from Scala to Go and into separate Kubernetes micro-services, \textbf{increasing application efficiency by 48\%}
+                \item Led the TALN service's migration from Azure to AWS, including a storage re-design from file-based mounted volumes to \textbf{AWS S3}, a move to \textbf{AWS Secrets Manager, AWS SNS/SQS, IAM, Python-based Lambdas}
+                \item Leveraged Istio for security features such as TLS termination, load balancing, and traffic mirroring
+            }{}
+            \iftoggle{go}{
+                \item Built \textit{TALN Updater} in Go, which propagates new e-mail scanning rules to hundreds of distributed TALN Kubernetes pods \textbf{every 5-15 minutes} to ensure best possible efficacy
+            }{}
+        \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {Software Engineer} % Job title
+    {Cisco Systems, Security \& Trust Organization} % Organization
+    {RTP, NC} % Location
+    {May 2018 - Jan 2022} % Date(s)
+    {
+        Back-end engineer for \textit{Corona}, which scans Cisco products to generate Software Bill of Materials (SBOM) used in vulnerability and licensing detection, supporting a monthly average of \textbf{1.3k users, 12k scans, and 1.5 TB of files scanned}. \hfill \break
+        \begin{cvitems} % Description(s) of tasks/responsibilities
+            \iftoggle{security}{
+                \item Designed a security risk report webpage and API in Ruby on Rails for Cisco products to learn their vulnerability risk, CVEs, and mitigations
+            }{
+                \item Designed REST APIs for new user-driven features, and implemented bug fixes in Ruby on Rails
+            }
+            \item Broke out the scanning capabilities of the monolithic app into Python micro-services using \textbf{AWS Batch and EC2}
+            \item Designed file scanners, checksum-based and signature-based (with Yara), for detecting internal Cisco security modules
+        \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {Project Manager and Web Developer} % Job title
+    {Yale University, Student Developer \& Mentorship Program} % Organization
+    {New Haven, CT} % Location
+    {Dec 2016 - May 2019} % Date(s)
+    {
+        Developer for the \href{https://gitlab.com/yale-sdmp/vesta}{\textit{Vesta}} application servicing the Yale housing lottery and room draw \hfill \break
+        \begin{cvitems} % Description(s) of tasks/responsibilities
+            \item {Re-designed the training curriculum for new Ruby on Rails developers, wrote Rspec unit tests, and provided code review}
+        \end{cvitems}
+    }
+
+\end{cventries}

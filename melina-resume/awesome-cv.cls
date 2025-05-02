@@ -89,9 +89,21 @@
   pdfauthor={},
   pdfsubject={},
   pdfkeywords={}
+  colorlinks=true,
+  urlcolor=awesome
 }
 % Solves issues Warning: File `cv.out' has changed
 \RequirePackage{bookmark}
+% Added to support link underlining
+\AtBeginDocument{
+    \hypersetup{
+        urlbordercolor=awesome,
+        pdfborder={0 0 1},
+        pdfborderstyle={/S/U/W 1}
+    }
+}
+
+\RequirePackage{multicol}
 
 %-------------------------------------------------------------------------------
 %                Configuration for directory locations
@@ -148,6 +160,14 @@
 \definecolor{awesome-nephritis}{HTML}{27AE60}
 \definecolor{awesome-concrete}{HTML}{95A5A6}
 \definecolor{awesome-darknight}{HTML}{131A28}
+\definecolor{awesome-nvidia}{HTML}{76B900}
+\definecolor{awesome-netflix}{HTML}{E50914}
+\definecolor{awesome-spotify}{HTML}{1DB954}
+\definecolor{awesome-slack}{HTML}{e01563}
+\definecolor{awesome-discord}{HTML}{7289da}
+\definecolor{awesome-anthropic}{HTML}{CC785C}
+\definecolor{awesome-stripe}{HTML}{5167FC}
+\definecolor{awesome-figma}{HTML}{c11c84}
 \colorlet{awesome}{awesome-red}
 
 % Boolean value to switch section color highlighting
