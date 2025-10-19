@@ -168,6 +168,7 @@
 \definecolor{awesome-anthropic}{HTML}{CC785C}
 \definecolor{awesome-stripe}{HTML}{5167FC}
 \definecolor{awesome-figma}{HTML}{c11c84}
+\definecolor{awesome-dropbox}{HTML}{0061FE}
 \colorlet{awesome}{awesome-red}
 
 % Boolean value to switch section color highlighting
